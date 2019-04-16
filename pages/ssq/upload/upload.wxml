@@ -1,0 +1,7 @@
+<cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}"><view slot="content"></view></cu-custom>
+
+<view class='padding center gray'>请彩票图片保持平整清晰</view>
+
+<view></view>
+
+<view class='padding center gray'>拍照时请遮挡部分票号及二维码</view>

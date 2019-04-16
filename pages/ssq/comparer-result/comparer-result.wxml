@@ -1,0 +1,89 @@
+<cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}"><view slot="content">双色球历史分析结果</view></cu-custom>
+
+
+<view class='balls flex'>
+  <view wx:for="{{red}}" wx:key class='ball ball-red ball-small checked'>{{item}}</view> 
+  <view wx:for="{{blue}}" wx:key class='ball ball-blue ball-small checked'>{{item}}</view> 
+</view>
+
+<van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item custom-class="collapse" title="一等奖 （{{ result.prize_first.length}}次）" name="1" disabled="{{ !result.prize_first.length}}">
+    <view class='results'>
+      <view class='result' wx:for="{{result.prize_first}}" wx:key>
+        <view class='flex'>第{{ item.number }}期 <text></text></view>
+        <view class='balls-result flex'>
+          <view 
+            wx:for="{{item.red}}" 
+            wx:for-item="ball"
+            wx:key class='ball ball-red ball-small checked'>{{ball}}</view> 
+          <view 
+            wx:for="{{item.blue}}" 
+            wx:for-item="ball"
+            wx:key class='ball ball-blue ball-small checked'>{{ball}}</view> 
+        </view>
+      </view>
+    </view>
+  </van-collapse-item>
+  
+  <van-collapse-item title="二等奖 （{{result.prize_second.length}}次）" name="2" disabled="{{!result.prize_second.length}}">
+    <view class='results'>
+      <view class='result' wx:for="{{result.prize_second}}" wx:key>
+        <view class='flex'>第{{ item.number }}期 <text></text></view>
+        <view class='balls-result flex'>
+          <view 
+            wx:for="{{item.red}}" 
+            wx:for-item="ball"
+            wx:key class='ball ball-red ball-small checked'>{{ball}}</view> 
+          <view 
+            wx:for="{{item.blue}}" 
+            wx:for-item="ball"
+            wx:key class='ball ball-blue ball-small'>{{ball}}</view> 
+        </view>
+      </view>
+    </view>
+  </van-collapse-item>
+
+  <van-collapse-item title="三等奖 （{{result.prize_third.length}}次）" name="3" disabled="{{!result.prize_third.length}}">
+    <view class='results'>
+      <view class='result' wx:for="{{result.prize_third}}" wx:key>
+        <view class='flex'>第{{ item.number }}期 <text></text></view>
+        <view class='balls-result flex'>
+          <view 
+            wx:for="{{item.red}}" 
+            wx:for-item="ball"
+            wx:key class="ball ball-red ball-small {{ball.checked ? 'checked' : ''}}">{{ball.value}}</view> 
+          <view 
+            wx:for="{{item.blue}}" 
+            wx:for-item="ball"
+            wx:key class="ball ball-blue ball-small {{ball.checked ? 'checked' : ''}}">{{ball.value}}</view> 
+        </view>
+      </view>
+    </view>
+  </van-collapse-item>
+
+  <van-collapse-item title="四等奖 （{{result.prize_fourth.length}}次）" name="4" disabled="{{!result.prize_fourth.length}}">
+    <view class='results'>
+      <view class='result' wx:for="{{result.prize_fourth}}" wx:key>
+        <view class='flex'>第{{ item.number }}期 <text></text></view>
+        <view class='balls-result flex'>
+          <view 
+            wx:for="{{item.red}}" 
+            wx:for-item="ball"
+            wx:key class="ball ball-red ball-small {{ball.checked ? 'checked' : ''}}">{{ball.value}}</view> 
+          <view 
+            wx:for="{{item.blue}}" 
+            wx:for-item="ball"
+            wx:key class="ball ball-blue ball-small {{ball.checked ? 'checked' : ''}}">{{ball.value}}</view> 
+        </view>
+      </view>
+    </view>
+  </van-collapse-item>
+
+  <van-collapse-item title="五等奖 （{{result.prize_fifth.length}}次）" name="5" disabled>
+   
+  </van-collapse-item>
+
+  <van-collapse-item title="六等奖 （{{result.prize_sixth.length}}次）" name="6" disabled>
+    
+  </van-collapse-item>
+</van-collapse>

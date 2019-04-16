@@ -1,0 +1,11 @@
+<cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}"><view slot="content">双色球开奖历史</view></cu-custom>
+
+<view class="record shadow-warp" wx:for="{{records}}" wx:key>
+  <view class='record-title'>第{{ item.number }}期</view>
+  <view class='balls flex'>
+    <view wx:for="{{item.red}}" wx:for-item="ball" wx:key class='ball ball-red ball-small checked'>{{ball}}</view> 
+    <view wx:for="{{item.blue}}" wx:for-item="ball" wx:key class='ball ball-blue ball-small checked'>{{ball}}</view> 
+  </view>
+</view>
+
+<i-load-more tip="{{ hasMore ? '数据加载中' : '人家是有底线的' }}" loading="{{ hasMore }}" />

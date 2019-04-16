@@ -1,0 +1,7 @@
+/* pages/ssq/random/random.wxss */
+
+.ball-tip {
+  color: #666;
+  padding: 20rpx 30rpx 0;
+}
+

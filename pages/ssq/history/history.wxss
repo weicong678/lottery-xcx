@@ -1,0 +1,13 @@
+.record {
+  width: 92vw;
+  background: #fff;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+}
+.record-title {
+  padding: 20rpx 30rpx 0; 
+}
+
+.shadow-warp:before {
+  display: none;
+}

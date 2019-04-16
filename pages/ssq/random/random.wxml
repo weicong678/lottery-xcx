@@ -1,0 +1,18 @@
+<cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}"><view slot="content">机选双色球</view></cu-custom>
+
+  <view class='ball-tip justify-between  justify-between'>
+    <view>至少选择6个红球，1个篮球</view>
+    <button bindtap="auto" class="cu-btn round bg-white">机选</button>
+  </view>
+
+  <view class='balls ball-reds flex-wrap'>
+    <view bindtap="slectRed" data-index="{{index}}" class="ball ball-red {{ item.checked ? 'checked shadow-blur' : '' }}" wx:for="{{red}}" wx:key>{{ index < 9 ? '0'+(index+1): index+1 }}</view>
+  </view>  
+
+  <view class='balls ball-reds flex-wrap'>
+    <view bindtap="slectBlue" data-index="{{index}}" class="ball ball-blue {{ item.checked ? 'checked shadow-blur' : '' }}" wx:for="{{blue}}" wx:key>{{ index < 9 ? '0'+(index+1): index+1 }}</view>
+  </view>  
+  
+<view class='padding tip'>
+  <icon class='iconfont iconweixinyaoyiyaoicon'></icon>摇一摇或者点击机选，来选择一组幸运号码
+</view>

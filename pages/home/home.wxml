@@ -1,0 +1,10 @@
+  <image src='/images/BasicsBg.png' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+  <view class='nav-list'>
+    <navigator open-type="navigate" hover-class='none' url="/pages/ssq/{{item.page}}/{{item.page}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='icon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+
+  <view class='padding center gray font-small'>数据来源于福利彩票官网（http://www.cwl.gov.cn），请以福彩官网公布数据为准</view>

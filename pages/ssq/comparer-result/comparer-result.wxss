@@ -1,0 +1,27 @@
+.collapse .van-collapse-item__content {
+  padding: 10rpx 30rpx;
+  background: #f6f6f6;
+}
+
+.result {
+  padding: 10rpx 10rpx;
+  border-bottom: 1px solid #ececec;
+}
+
+.result:nth-last-of-type(1) {
+  border: none;
+}
+
+.balls {
+  flex-wrap: wrap;
+}
+
+.balls-result {
+  border: none;
+  margin-top: 5rpx;
+  padding: 0;
+}
+
+.ball {
+  background: #f3f3f3;
+}
